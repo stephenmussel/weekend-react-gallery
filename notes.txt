@@ -1,0 +1,43 @@
+
+Strategies to not panic:
+- Build the easy setup stuff first, build moment
+- kicking it off Fri while it's fresh
+- caffeine
+- take breaks
+
+Todo
+
+Provided
+
+[x] server-side GET to retrieve data
+[x] server-side PUT to update (like) photo
+[] no DB needed for base
+
+Setup 
+[x] npm install dependencies
+[x] sandbox.js
+[x] add test images to public/images
+[] wireframe
+[] App.jsx (start with everything in here first, then break into components if there's time)
+    [] GalleryList component
+    [] GalleryItem component
+[] use axios to GET data from /gallery and store in App.jsx
+    [] loop over list of gallery data with .map
+    [] make GalleryItem
+        [] include like button
+        [] description when clicked
+[] use axios to PUT (update) the like count /gallery/like/:id 
+    [] update GalleryList when like button clicked
+[] GalleryList to display GalleryItem
+
+Features
+[] Render all images as a gallery
+[] Visitor
+    [] clicks image to see description
+    [] clicks button to like image
+
+Styling
+[ ] tbd
+
+Stretch Goals
+....worry about these later.
