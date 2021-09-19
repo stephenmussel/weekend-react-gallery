@@ -2,6 +2,8 @@ import Axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import galleryItems from '../../modules/gallery.data';
 import './App.css';
+import Header from './Header/Header.jsx';
+import GalleryList from '../GalleryList/GalleryList';
 
 function App() {
 
@@ -23,17 +25,11 @@ function App() {
 
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Life of Phaydara</h1>
-        </header>
-        {/* <p>My Gallery</p> */}
-        {galleryItems.map(image => 
-          (<div className="gallery-grid">
-            <img key={image.id} src={image.path} className="gallery-image"/><br />
-            <button onClick={() => setCounter(counter + 1)} className="love-button">love it!</button>
-            <p>&#10084;&#65039;&nbsp; {counter}</p>
-          </div>)
-        )}
+        <Header />
+        <GalleryList 
+          galleryItems={galleryItems}
+          counter={counter}
+        />
       </div>
     )
 }
