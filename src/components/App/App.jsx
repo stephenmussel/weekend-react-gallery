@@ -2,13 +2,18 @@ import Axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import galleryItems from '../../modules/gallery.data';
 import './App.css';
-import Header from './Header/Header.jsx';
-import GalleryList from '../GalleryList/GalleryList';
+import Header from '../Header/Header.jsx';
+import GalleryList from '../GalleryList/GalleryList.jsx';
+import GalleryItem from '../GalleryItem/GalleryItem.jsx';
 
 function App() {
 
-  const [galleryList, setGalleryList] = useState (galleryItems);
-  const [counter, setCounter] = useState(0);
+  const [galleryList, setGalleryList] = useState ([]);
+
+  // fetches images on page load
+  useEffect(() => {
+    fetchImages()
+  }, [])
 
   const fetchImages = () => {
     Axios({
@@ -26,10 +31,10 @@ function App() {
     return (
       <div className="App">
         <Header />
-        <GalleryList 
+        {/* <GalleryList 
           galleryItems={galleryItems}
-          counter={counter}
-        />
+        /> */}
+        <GalleryItem />
       </div>
     )
 }
