@@ -24,6 +24,18 @@ function App() {
     });
   }
 
+  const loveItem = (galleryId) => {
+    axios({
+      method: 'PUT',
+      url: `/like/${galleryId}`, // don't forget backticks!
+    }).then((response) => {
+      fetchGallery();
+    }).catch((error) => {
+      alert('error in loveItem');
+      console.log(error);
+    })
+  }
+
   useEffect(() => {
     fetchGallery();
   }, []);

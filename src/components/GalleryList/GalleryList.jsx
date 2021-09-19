@@ -6,15 +6,14 @@ function GalleryList({list}) {
             <div className="gallery-list-container">
             <h2>Gallery List</h2>
                 {/* loops thru {list} to display each image in gallery.data.js */}
-                <p>{list.map(image => 
+                {list.map(galleryItem => 
                         (<>
-                            <img key={image.id} src={image.path} alt={image.description}/>
-                            <p>{image.description}</p>
+                            <p key={galleryItem.id}><img src={galleryItem.path} alt={galleryItem.description}/></p>
+                            <p>{galleryItem.description}</p>
                             <GalleryItem />
                         </>)
                     )}
-                </p>
-            </div>
+                </div>
         </>
     )
 }

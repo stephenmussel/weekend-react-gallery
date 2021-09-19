@@ -9,7 +9,7 @@ function GalleryItem () {
     return(
         <>
             <button className="love-button" onClick={ () => setLoveCounter(loveCounter + 1) }>love it!</button>
-            <div>&#10084;&#65039;&nbsp; {loveCounter}</div>
+            <p>&#10084;&#65039;&nbsp; {loveCounter}</p>
         </>
     )
 }
