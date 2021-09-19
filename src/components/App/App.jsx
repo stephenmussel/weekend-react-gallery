@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import galleryItems from '../../modules/gallery.data';
 import { useEffect } from 'react/cjs/react.development';
+import GalleryList from '../GalleryList/GalleryList';
 
 function App() {
 
@@ -30,10 +31,8 @@ function App() {
     return (
       <div className="App">
         <Header />
-        <h2>Gallery goes here</h2>
-        <h2><img src="{galleryItems.path}" /></h2>
-
-        <p>Gallery item</p>
+        <GalleryList list={galleryList}/>
+        <p>SAMPLE gallery item</p>
         <img src="images/climbing-2.jpg"/>
         <button className="love-button" onClick={ () => setLikeCounter(likeCounter + 1) }>love it!</button>
         <div>&#10084;&#65039;&nbsp; {likeCounter}</div>
