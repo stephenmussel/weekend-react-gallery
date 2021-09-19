@@ -24,19 +24,18 @@ function App() {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Gallery of My Life</h1>
+          <h1 className="App-title">Life of Phaydara</h1>
         </header>
         {/* <p>My Gallery</p> */}
-        {galleryItems.map(image => <img key={image.id} src={image.path}/>)}
-        <div className="gallery-image">
-          <img src="images/climbing-2.jpg"/>
-          <br /><br />
-          <button onClick={() => setCounter(counter + 1)}  className="love-button">love it!</button>
-          <br />
-          <p>&#10084;&#65039;&nbsp; {counter}</p>
-        </div>
+        {galleryItems.map(image => 
+          (<div className="gallery-grid">
+            <img key={image.id} src={image.path} className="gallery-image"/><br />
+            <button onClick={() => setCounter(counter + 1)} className="love-button">love it!</button>
+            <p>&#10084;&#65039;&nbsp; {counter}</p>
+          </div>)
+        )}
       </div>
-    );
+    )
 }
 
 export default App;

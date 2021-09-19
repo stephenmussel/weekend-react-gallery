@@ -17,14 +17,14 @@ Setup
 [x] npm install dependencies
 [x] sandbox.js
 [x] add test images to public/images
-[] wireframe
+[x] wireframe
 [] App.jsx (start with everything in here first, then break into components if there's time)
     [] GalleryList component
-    [] GalleryItem component
+    [x] GalleryItem component
 [] use axios to GET data from /gallery and store in App.jsx
-    [] loop over list of gallery data with .map
-    [] make GalleryItem
-        [] include like button
+    [x] loop over list of gallery data with .map
+    [x] make GalleryItem
+        [x] include like button
         [] description when clicked
 [] use axios to PUT (update) the like count /gallery/like/:id 
     [] update GalleryList when like button clicked
