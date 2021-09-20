@@ -2,9 +2,8 @@ import React from 'react';
 import './App.css';
 import Header from '../Header/Header';
 import axios from 'axios';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import galleryItems from '../../modules/gallery.data';
-import { useEffect } from 'react/cjs/react.development';
 import GalleryList from '../GalleryList/GalleryList';
 
 function App() {
@@ -24,14 +23,15 @@ function App() {
     });
   }
 
-  const loveItem = (galleryId) => {
+  const updateLove = (galleryId) => {
+    console.log(galleryId);
     axios({
       method: 'PUT',
-      url: `/like/${galleryId}`, // don't forget backticks!
+      url: `/like/${galleryId}`,
     }).then((response) => {
       fetchGallery();
     }).catch((error) => {
-      alert('error in loveItem');
+      alert('error in updateLike');
       console.log(error);
     })
   }
