@@ -10,6 +10,7 @@ function GalleryItem ({item, updateLove}) {
     const handleLove = (galleryId) => {
         console.log('in handleLove', galleryId); //
         setLoveCounter(loveCounter + 1);
+        updateLove(galleryId)
         setDescription(true);
     }
 
@@ -19,7 +20,7 @@ function GalleryItem ({item, updateLove}) {
             <button className="love-button" onClick={ () => handleLove(item) }>love it!</button>
             {/* <button className="love-button" onClick={ () => setLoveCounter(loveCounter + 1) }>love it!</button> */}
             <p>&#10084;&#65039;&nbsp; {loveCounter}</p>
-            {description && <div>{item.description}</div>}<br />
+            {/* {description && <div>{item.description}</div>}<br /> */}
         </>
     )
 }

@@ -17,7 +17,7 @@ function GalleryList({list, updateLove}) {
                             <br />
                             <GalleryItem 
                                 item={item}
-                                updateLike={updateLove}
+                                updateLove={updateLove}
                             />
                             
                             

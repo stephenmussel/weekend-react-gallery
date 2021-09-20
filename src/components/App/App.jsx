@@ -31,7 +31,7 @@ function App() {
     }).then((response) => {
       fetchGallery();
     }).catch((error) => {
-      alert('error in updateLike');
+      alert('error in updateLove');
       console.log(error);
     })
   }
@@ -43,7 +43,10 @@ function App() {
     return (
       <div className="App">
         <Header />
-        <GalleryList list={galleryList}/>
+        <GalleryList 
+          list={galleryList}
+          updateLove={updateLove}
+        />
       </div>
     );
 }
